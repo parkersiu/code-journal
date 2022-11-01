@@ -9,6 +9,18 @@
   height: 100%;
 }
 
+header {
+  margin: 0 auto;
+}
+
+main {
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 auto;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;

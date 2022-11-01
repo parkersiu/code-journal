@@ -8,8 +8,7 @@ form {
   height: 100%;
 }
 
-h1,
-h2 {
+h1 {
   font-family: "Proza Libre", sans-serif;
 }
 
@@ -17,9 +16,14 @@ h2 {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 header {
   background-color: #562b81;
   color: white;
+  font-size: 80%;
 }
 
 input {
@@ -28,10 +32,12 @@ input {
   border: 1px solid lightgrey;
   width: 100%;
   padding: 0.5rem;
+  margin: 10px 0;
 }
 
 #notes {
-  height: 100px;
+  height: 150px;
+  text-align: left;
 }
 
 .save {
@@ -40,15 +46,32 @@ input {
   border-radius: 2px;
   border: none;
   padding: 5px 10px;
+  margin: 15px 0;
 }
 
 i {
-  height: 300px;
   width: 100%;
-  background-color: #e5e5e5;
   color: #d3d3d3;
+  background-color: #e5e5e5;
 }
 
 img {
   width: 100%;
+}
+
+.margin-top {
+  margin-top: 15px;
+}
+
+input:focus {
+  outline-color: #562b81;
+}
+
+.title {
+  margin-left: 1.5rem;
+  padding: 1rem 0;
+}
+
+.image-column {
+  border-radius: 5px;
 }
