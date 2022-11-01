@@ -20,7 +20,7 @@ $form.addEventListener('submit', function (event) {
   values.notes = $form.elements.notes.value;
   values.nextEntryId = data.nextEntryId;
   data.nextEntryId++;
-  data.entries.prepend(values);
+  data.entries.push(values);
   $image.setAttribute('src', '');
   $form.reset();
 });
