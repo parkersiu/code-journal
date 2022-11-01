@@ -12,3 +12,15 @@ $photoURL.addEventListener('input', function (event) {
   $image.className = '';
   $icon.className = 'fa-regular fa-image hidden';
 });
+
+$form.addEventListener('submit', function (event) {
+  var values = {};
+  values.title = $form.elements.title.value;
+  values.url = $form.elements.url.value;
+  values.notes = $form.elements.notes.value;
+  values.nextEntryId = data.nextEntryId;
+  data.nextEntryId++;
+  data.entries.prepend(values);
+  $image.setAttribute('src', '');
+  $form.reset();
+});
