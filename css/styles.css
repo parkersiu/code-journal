@@ -1,0 +1,50 @@
+main {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f0f0f0;
+  height: 800px;
+}
+
+form {
+  height: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Proza Libre", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+header {
+  background-color: #562b81;
+  color: white;
+}
+
+input {
+  display: block;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+#notes {
+  height: 100px;
+}
+
+.save {
+  background-color: #562b81;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  padding: 5px 10px;
+}
+
+i {
+  height: 300px;
+  width: 100%;
+  background-color: #e5e5e5;
+  color: #d3d3d3;
+}
