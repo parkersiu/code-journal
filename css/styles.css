@@ -1,7 +1,7 @@
 main {
   font-family: "Open Sans", sans-serif;
   background-color: #f0f0f0;
-  height: 800px;
+  height: 1000px;
 }
 
 form {
@@ -35,9 +35,18 @@ input {
   margin: 10px 0;
 }
 
+textarea {
+  display: block;
+  resize: none;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  margin: 10px 0;
+}
+
 #notes {
   height: 150px;
-  text-align: left;
+  font-family: "Open Sans", sans-serif;
 }
 
 .save {
@@ -49,14 +58,9 @@ input {
   margin: 15px 0;
 }
 
-i {
-  width: 100%;
-  color: #d3d3d3;
-  background-color: #e5e5e5;
-}
-
 img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .margin-top {
@@ -64,6 +68,10 @@ img {
 }
 
 input:focus {
+  outline-color: #562b81;
+}
+
+textarea:focus {
   outline-color: #562b81;
 }
 
