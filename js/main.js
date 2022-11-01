@@ -10,6 +10,7 @@ $photoURL.addEventListener('input', function (event) {
 });
 
 $form.addEventListener('submit', function (event) {
+  event.preventDefault();
   var values = {};
   values.title = $form.elements.title.value;
   values.url = $form.elements.url.value;
