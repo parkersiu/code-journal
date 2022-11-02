@@ -55,18 +55,24 @@ document.addEventListener('DOMContentLoaded', function (event) {
   for (var i = 0; i < data.entries.length; i++) {
     renderEntries(data.entries[i]);
   }
+  updateView(data.view);
 });
 
 $new.addEventListener('click', function (event) {
-  $entriesForm.className = '';
-  $entries.className = 'hidden';
+  updateView('entry-form');
 });
 
 $navEntries.addEventListener('click', function (event) {
-  $entries.className = '';
-  $entriesForm.className = 'hidden';
+  updateView('entries');
 });
 
-/* function updateView (data-view) {
-  if ()
-} */
+function updateView(string) {
+  data.view = string;
+  if (data.view === 'entries') {
+    $entries.className = '';
+    $entriesForm.className = 'hidden';
+  } else if (data.view === 'entry-form') {
+    $entries.className = 'hidden';
+    $entriesForm.className = '';
+  }
+}
