@@ -24,7 +24,7 @@
     <h1 class="title">Code Journal</h1>
   </header>
   <main>
-    <form id="form">
+    <form id="form" class="hidden">
       <div data-view="entry-form" class="container">
         <div class="row">
           <div class="column-full">
@@ -55,6 +55,32 @@
         </div>
       </div>
     </form>
+    <div data-vew="entries">
+      <div class="container">
+        <ul>
+          <li>
+            <div class="row">
+              <div class="column-full">
+                <h1 class="page-title">Entries</h1>
+                <button class="new-button">NEW</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-half">
+                <img src="images/placeholder-image-square.jpg">
+              </div>
+              <div class="column-half">
+                <h2>Ada Lovelace</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem pariatur assumenda,
+                  vero iste consectetur minus a laborum maiores nihil itaque aliquid eius eligendi sint id
+                  beatae voluptates, recusandae ullam laudantium!
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>

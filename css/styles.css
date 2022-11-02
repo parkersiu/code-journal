@@ -58,6 +58,16 @@ textarea {
   margin: 15px 0;
 }
 
+.new-button {
+  background-color: #562b81;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  padding: 5px 10px;
+  margin: 15px 0;
+  float: right;
+}
+
 img {
   width: 100%;
   border-radius: 5px;
@@ -82,4 +92,13 @@ textarea:focus {
 
 .image-column {
   border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page-title {
+  display: inline-block;
 }
