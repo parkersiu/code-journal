@@ -21,6 +21,8 @@ $form.addEventListener('submit', function (event) {
   data.entries.push(values);
   $image.setAttribute('src', '');
   $form.reset();
+  $entries.className = '';
+  $form.className = 'hidden';
 });
 
 function renderEntries(entry) {
