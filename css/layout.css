@@ -6,6 +6,20 @@
   max-width: 575px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  height: 100%;
+}
+
+header {
+  margin: 0 auto;
+}
+
+main {
+  margin: 0 auto;
+  padding: 2% 0;
+}
+
+h1 {
+  margin: 0 auto;
 }
 
 .row {

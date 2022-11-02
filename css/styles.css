@@ -1,0 +1,85 @@
+main {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f0f0f0;
+  height: 1000px;
+}
+
+form {
+  height: 100%;
+}
+
+h1 {
+  font-family: "Proza Libre", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+header {
+  background-color: #562b81;
+  color: white;
+  font-size: 80%;
+}
+
+input {
+  display: block;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 10px 0;
+}
+
+textarea {
+  display: block;
+  resize: none;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  margin: 10px 0;
+}
+
+#notes {
+  height: 150px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.save {
+  background-color: #562b81;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  padding: 5px 10px;
+  margin: 15px 0;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.margin-top {
+  margin-top: 15px;
+}
+
+input:focus {
+  outline-color: #562b81;
+}
+
+textarea:focus {
+  outline-color: #562b81;
+}
+
+.title {
+  margin-left: 1.5rem;
+  padding: 1rem 0;
+}
+
+.image-column {
+  border-radius: 5px;
+}
