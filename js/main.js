@@ -35,7 +35,7 @@ function renderEntries(entry) {
   var h2 = document.createElement('h2');
   h2.textContent = entry.title;
   var p = document.createElement('p');
-  p.textContent = entry.description;
+  p.textContent = entry.notes;
   var $ul = document.querySelector('ul');
   $ul.appendChild(li);
   li.appendChild(divRow);
