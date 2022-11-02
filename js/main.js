@@ -1,8 +1,9 @@
 var $photoURL = document.getElementById('url');
-
 var $image = document.getElementById('image');
-
 var $form = document.getElementById('form');
+var $new = document.getElementById('new');
+var $entries = document.getElementById('entries');
+var $navEntries = document.getElementById('nav-entries');
 
 $photoURL.addEventListener('input', function (event) {
   var $url = $form.elements.url.value;
@@ -53,19 +54,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 });
 
-/*
-  <li>
-    <div class="row">
-      <div class="column-half">
-        <img src="images/placeholder-image-square.jpg">
-      </div>
-      <div class="column-half">
-        <h2>Ada Lovelace</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem pariatur assumenda,
-          vero iste consectetur minus a laborum maiores nihil itaque aliquid eius eligendi sint id
-          beatae voluptates, recusandae ullam laudantium!
-        </p>
-      </div>
-    </div>
-  </li>
-*/
+$new.addEventListener('click', function (event) {
+  $form.className = '';
+  $entries.className = 'hidden';
+});
+
+$navEntries.addEventListener('click', function (event) {
+  $entries.className = '';
+  $form.className = 'hidden';
+});
