@@ -138,3 +138,7 @@ h2 {
   color: #562b81;
   margin: inherit;
 }
+
+i:hover {
+  cursor: pointer;
+}

@@ -82,3 +82,10 @@ function updateView(string) {
     $entriesForm.className = '';
   }
 }
+
+$ul.addEventListener('click', function (event) {
+  if (event.target.tagName === 'I') {
+    $entries.className = 'hidden';
+    $entriesForm.className = '';
+  }
+});
