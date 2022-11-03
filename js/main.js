@@ -6,6 +6,7 @@ var $entries = document.getElementById('entries');
 var $navEntries = document.getElementById('nav-entries');
 var $entriesForm = document.getElementById('entry-form');
 var $ul = document.getElementById('entrylist');
+var dataEntryId = 1;
 
 $photoURL.addEventListener('input', function (event) {
   var $url = $form.elements.url.value;
@@ -41,15 +42,17 @@ function renderEntries(entry) {
   h2.textContent = entry.title;
   var p = document.createElement('p');
   p.textContent = entry.notes;
-  var i = document.createElement('i');
-  i.className = 'fa-solid fa-pencil';
+  var icon = document.createElement('i');
+  icon.className = 'fa-solid fa-pencil';
   li.appendChild(divRow);
   divRow.appendChild(divColumnHalf);
   divColumnHalf.appendChild(img);
   divRow.appendChild(divColumnHalf2);
   divColumnHalf2.appendChild(h2);
-  divColumnHalf2.appendChild(i);
+  divColumnHalf2.appendChild(icon);
   divColumnHalf2.appendChild(p);
+  li.setAttribute('data-entry-id', dataEntryId);
+  dataEntryId++;
   return li;
 }
 
