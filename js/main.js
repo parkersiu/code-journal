@@ -6,7 +6,6 @@ var $entries = document.getElementById('entries');
 var $navEntries = document.getElementById('nav-entries');
 var $entriesForm = document.getElementById('entry-form');
 var $ul = document.getElementById('entrylist');
-var dataEntryId = 1;
 
 $photoURL.addEventListener('input', function (event) {
   var $url = $form.elements.url.value;
@@ -51,8 +50,7 @@ function renderEntries(entry) {
   divColumnHalf2.appendChild(h2);
   divColumnHalf2.appendChild(icon);
   divColumnHalf2.appendChild(p);
-  li.setAttribute('data-entry-id', dataEntryId);
-  dataEntryId++;
+  li.setAttribute('data-entry-id', entry.nextEntryId);
   return li;
 }
 
@@ -87,5 +85,12 @@ $ul.addEventListener('click', function (event) {
   if (event.target.tagName === 'I') {
     $entries.className = 'hidden';
     $entriesForm.className = '';
+    var $closest = event.target.closest('li');
+    var $dataEntryIdValue = parseInt($closest.getAttribute('data-entry-id'));
+    for (var i = 0; i < data.entries.length; i++) {
+      if ($dataEntryIdValue === data.entries[i].nextEntryId) {
+        data.editing = data.entries[i];
+      }
+    }
   }
 });
