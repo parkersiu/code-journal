@@ -92,5 +92,9 @@ $ul.addEventListener('click', function (event) {
         data.editing = data.entries[i];
       }
     }
+    $form.elements.title.value = data.editing.title;
+    $form.elements.url.value = data.editing.url;
+    $form.elements.notes.value = data.editing.notes;
+    $image.setAttribute('src', data.editing.url);
   }
 });
