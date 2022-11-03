@@ -1,11 +1,9 @@
-main {
-  font-family: "Open Sans", sans-serif;
+* {
   background-color: #f0f0f0;
-  height: 1000px;
 }
 
-form {
-  height: 100%;
+main {
+  font-family: "Open Sans", sans-serif;
 }
 
 h1 {
@@ -27,6 +25,7 @@ header {
 }
 
 input {
+  background-color: #fff;
   display: block;
   border-radius: 3px;
   border: 1px solid lightgrey;
@@ -36,6 +35,7 @@ input {
 }
 
 textarea {
+  background-color: #fff;
   display: block;
   resize: none;
   width: 100%;
@@ -58,6 +58,16 @@ textarea {
   margin: 15px 0;
 }
 
+.new {
+  background-color: #562b81;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  padding: 5px 10px;
+  margin: 15px 0;
+  float: right;
+}
+
 img {
   width: 100%;
   border-radius: 5px;
@@ -76,10 +86,43 @@ textarea:focus {
 }
 
 .title {
+  background-color: #562b81;
   margin-left: 1.5rem;
   padding: 1rem 0;
 }
 
 .image-column {
   border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page-title {
+  display: inline-block;
+}
+
+nav {
+  background-color: inherit;
+  font-size: 150%;
+  font-family: "Proza Libre", sans-serif;
+  margin: 0 3%;
+}
+
+a {
+  background-color: #562b81;
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: white;
+}
+
+.inline-block {
+  display: inline-block;
 }
