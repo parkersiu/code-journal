@@ -41,11 +41,14 @@ function renderEntries(entry) {
   h2.textContent = entry.title;
   var p = document.createElement('p');
   p.textContent = entry.notes;
+  var i = document.createElement('i');
+  i.className = 'fa-solid fa-pencil';
   li.appendChild(divRow);
   divRow.appendChild(divColumnHalf);
   divColumnHalf.appendChild(img);
   divRow.appendChild(divColumnHalf2);
   divColumnHalf2.appendChild(h2);
+  divColumnHalf2.appendChild(i);
   divColumnHalf2.appendChild(p);
   return li;
 }

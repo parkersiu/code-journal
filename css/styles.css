@@ -126,3 +126,15 @@ a:active {
 .inline-block {
   display: inline-block;
 }
+
+h2 {
+  display: inline;
+  margin: 0;
+}
+
+.fa-solid {
+  display: inline;
+  float: right;
+  color: #562b81;
+  margin: inherit;
+}
