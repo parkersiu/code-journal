@@ -78,6 +78,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 $new.addEventListener('click', function (event) {
   $formTitle.textContent = 'New Entry';
   $image.setAttribute('src', 'images/placeholder-image-square.jpg');
+  $form.elements.title.value = '';
+  $form.elements.url.value = '';
+  $form.elements.notes.value = '';
   updateView('entry-form');
 });
 
