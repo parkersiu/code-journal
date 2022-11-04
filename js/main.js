@@ -6,6 +6,7 @@ var $entries = document.getElementById('entries');
 var $navEntries = document.getElementById('nav-entries');
 var $entriesForm = document.getElementById('entry-form');
 var $ul = document.getElementById('entrylist');
+var $formTitle = document.getElementById('form-title');
 
 $photoURL.addEventListener('input', function (event) {
   var $url = $form.elements.url.value;
@@ -75,8 +76,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 });
 
 $new.addEventListener('click', function (event) {
-  updateView('entry-form');
+  $formTitle.textContent = 'New Entry';
   $image.setAttribute('src', 'images/placeholder-image-square.jpg');
+  updateView('entry-form');
 });
 
 $navEntries.addEventListener('click', function (event) {
@@ -98,6 +100,7 @@ $ul.addEventListener('click', function (event) {
   if (event.target.tagName === 'I') {
     $entries.className = 'hidden';
     $entriesForm.className = '';
+    $formTitle.textContent = 'Edit Entry';
     var $closest = event.target.closest('li');
     var $dataEntryIdValue = parseInt($closest.getAttribute('data-entry-id'));
     for (var i = 0; i < data.entries.length; i++) {
