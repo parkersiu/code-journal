@@ -9,6 +9,8 @@ var $ul = document.getElementById('entrylist');
 var $formTitle = document.getElementById('form-title');
 var $deleteAnchor = document.getElementById('edit-anchor');
 var $popup = document.getElementById('popup');
+var $cancelButton = document.getElementById('cancel');
+var $confirmButton = document.getElementById('confirm');
 
 $photoURL.addEventListener('input', function (event) {
   var $url = $form.elements.url.value;
@@ -125,4 +127,12 @@ $ul.addEventListener('click', function (event) {
 
 $deleteAnchor.addEventListener('click', function (event) {
   $popup.className = '';
+});
+
+$popup.addEventListener('click', function (event) {
+  if (event.target === $cancelButton) {
+    $popup.className = 'hidden';
+  } else if (event.target === $confirmButton) {
+    /* console.log('confirm clicked'); */
+  }
 });
