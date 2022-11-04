@@ -8,6 +8,7 @@ var $entriesForm = document.getElementById('entry-form');
 var $ul = document.getElementById('entrylist');
 var $formTitle = document.getElementById('form-title');
 var $deleteAnchor = document.getElementById('edit-anchor');
+var $popup = document.getElementById('popup');
 
 $photoURL.addEventListener('input', function (event) {
   var $url = $form.elements.url.value;
@@ -120,4 +121,8 @@ $ul.addEventListener('click', function (event) {
     $image.setAttribute('src', data.editing.url);
     $deleteAnchor.className = '';
   }
+});
+
+$deleteAnchor.addEventListener('click', function (event) {
+  $popup.className = '';
 });
