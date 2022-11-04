@@ -7,6 +7,7 @@ var $navEntries = document.getElementById('nav-entries');
 var $entriesForm = document.getElementById('entry-form');
 var $ul = document.getElementById('entrylist');
 var $formTitle = document.getElementById('form-title');
+var $deleteAnchor = document.getElementById('edit-anchor');
 
 $photoURL.addEventListener('input', function (event) {
   var $url = $form.elements.url.value;
@@ -82,10 +83,12 @@ $new.addEventListener('click', function (event) {
   $form.elements.url.value = '';
   $form.elements.notes.value = '';
   updateView('entry-form');
+  $deleteAnchor.className = 'hidden';
 });
 
 $navEntries.addEventListener('click', function (event) {
   updateView('entries');
+  $deleteAnchor.className = 'hidden';
 });
 
 function updateView(string) {
@@ -115,5 +118,6 @@ $ul.addEventListener('click', function (event) {
     $form.elements.url.value = data.editing.url;
     $form.elements.notes.value = data.editing.notes;
     $image.setAttribute('src', data.editing.url);
+    $deleteAnchor.className = '';
   }
 });
