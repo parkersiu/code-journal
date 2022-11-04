@@ -19,10 +19,22 @@ $form.addEventListener('submit', function (event) {
   values.url = $form.elements.url.value;
   values.notes = $form.elements.notes.value;
   values.nextEntryId = data.nextEntryId;
-  data.nextEntryId++;
-  data.entries.unshift(values);
+  if (data.editing !== null) {
+    for (var i = 0; i < data.entries.length; i++) {
+      if (data.editing.nextEntryId === data.entries[i].nextEntryId) {
+        data.entries[i].title = $form.elements.title.value;
+        data.entries[i].url = $form.elements.url.value;
+        data.entries[i].notes = $form.elements.notes.value;
+        var $currentLi = document.getElementById(data.entries[i].nextEntryId);
+        $currentLi.replaceWith(renderEntries(data.entries[i]));
+      }
+    } data.editing = null;
+  } else {
+    data.entries.unshift(values);
+    $ul.prepend(renderEntries(values));
+    data.nextEntryId++;
+  }
   $image.setAttribute('src', '');
-  $ul.prepend(renderEntries(values));
   $form.reset();
   updateView('entries');
 });
@@ -51,6 +63,7 @@ function renderEntries(entry) {
   divColumnHalf2.appendChild(icon);
   divColumnHalf2.appendChild(p);
   li.setAttribute('data-entry-id', entry.nextEntryId);
+  li.setAttribute('id', entry.nextEntryId);
   return li;
 }
 
