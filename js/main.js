@@ -133,6 +133,19 @@ $popup.addEventListener('click', function (event) {
   if (event.target === $cancelButton) {
     $popup.className = 'hidden';
   } else if (event.target === $confirmButton) {
-    /* console.log('confirm clicked'); */
+    removeEntry();
+    updateView('entries');
+    $popup.className = 'hidden';
   }
 });
+
+function removeEntry() {
+  for (var i = 0; i < data.entries.length; i++) {
+    if (data.entries[i].nextEntryId === data.editing.nextEntryId) {
+      data.entries.splice(i, 1);
+      var $li = document.getElementById(data.editing.nextEntryId);
+      $li.remove();
+    }
+  }
+  data.editing = null;
+}
