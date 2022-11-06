@@ -116,6 +116,7 @@ ul {
 
 .page-title {
   display: inline-block;
+  padding: 5px 10px;
 }
 
 nav {
@@ -151,6 +152,7 @@ h2 {
   float: right;
   color: #562b81;
   margin: inherit;
+  padding: 20px 0;
 }
 
 i:hover,
@@ -196,7 +198,7 @@ button:hover {
   position: relative;
   top: 40%;
   padding: 5% 0;
-  margin: 0 20%;
+  margin: 0 15%;
   border-radius: 10px;
 }
 

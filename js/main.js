@@ -59,7 +59,7 @@ function renderEntries(entry) {
   var p = document.createElement('p');
   p.textContent = entry.notes;
   var icon = document.createElement('i');
-  icon.className = 'fa-solid fa-pencil';
+  icon.className = 'fa-solid fa-pencil fa-lg';
   li.appendChild(divRow);
   divRow.appendChild(divColumnHalf);
   divColumnHalf.appendChild(img);
