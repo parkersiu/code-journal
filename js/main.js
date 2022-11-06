@@ -7,6 +7,10 @@ var $navEntries = document.getElementById('nav-entries');
 var $entriesForm = document.getElementById('entry-form');
 var $ul = document.getElementById('entrylist');
 var $formTitle = document.getElementById('form-title');
+var $deleteAnchor = document.getElementById('edit-anchor');
+var $popup = document.getElementById('popup');
+var $cancelButton = document.getElementById('cancel');
+var $confirmButton = document.getElementById('confirm');
 
 $photoURL.addEventListener('input', function (event) {
   var $url = $form.elements.url.value;
@@ -55,7 +59,7 @@ function renderEntries(entry) {
   var p = document.createElement('p');
   p.textContent = entry.notes;
   var icon = document.createElement('i');
-  icon.className = 'fa-solid fa-pencil';
+  icon.className = 'fa-solid fa-pencil fa-lg';
   li.appendChild(divRow);
   divRow.appendChild(divColumnHalf);
   divColumnHalf.appendChild(img);
@@ -82,10 +86,12 @@ $new.addEventListener('click', function (event) {
   $form.elements.url.value = '';
   $form.elements.notes.value = '';
   updateView('entry-form');
+  $deleteAnchor.className = 'hidden';
 });
 
 $navEntries.addEventListener('click', function (event) {
   updateView('entries');
+  $deleteAnchor.className = 'hidden';
 });
 
 function updateView(string) {
@@ -115,5 +121,31 @@ $ul.addEventListener('click', function (event) {
     $form.elements.url.value = data.editing.url;
     $form.elements.notes.value = data.editing.notes;
     $image.setAttribute('src', data.editing.url);
+    $deleteAnchor.className = '';
   }
 });
+
+$deleteAnchor.addEventListener('click', function (event) {
+  $popup.className = '';
+});
+
+$popup.addEventListener('click', function (event) {
+  if (event.target === $cancelButton) {
+    $popup.className = 'hidden';
+  } else if (event.target === $confirmButton) {
+    removeEntry();
+    updateView('entries');
+    $popup.className = 'hidden';
+  }
+});
+
+function removeEntry() {
+  for (var i = 0; i < data.entries.length; i++) {
+    if (data.entries[i].nextEntryId === data.editing.nextEntryId) {
+      data.entries.splice(i, 1);
+      var $li = document.getElementById(data.editing.nextEntryId);
+      $li.remove();
+    }
+  }
+  data.editing = null;
+}
